@@ -26,12 +26,16 @@
       $badword = $_GET["badword"];
       $sentence = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
       $goodSentence = str_replace($badword, '***', $sentence);
-      $sentenceleng = strlen($goodSentence);
+      $sentenceleng = strlen($sentence);
+      $goodSentenceleng = strlen($goodSentence);
       // var_dump($goodSentence); die();
-      echo $sentenceleng;
-      echo " lung = ";
-      echo $goodSentence;
       ?>
     </h1>
+
+    <h1><?php echo $sentence; ?></h1>
+    <h1><?php echo "Lungezza del stringa = "; echo $sentenceleng;?></h1>
+    <h1><?php echo $goodSentence; ?></h1>
+    <h1><?php echo 'Lungezza della stringa modificata = '; echo $goodSentenceleng; ?></h1>
+    <h1><?php echo 'Parola badword che sostituisce con *** = '; echo $badword; ?></h1>
   </body>
 </html>
